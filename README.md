@@ -35,22 +35,21 @@ Or checkout [gem-cd][], [gem-eit][], [gem-grep][] for shorthands.
 
 ### Gem path
 
-    gem path gem-path           # ~/.gem/ruby/2.0.0/gems/gem-path-1.0.0
+    gem path rib           # ~/.gem/ruby/2.0.0/gems/rib-1.0.0
 
 ### Gem path with specific gem version
 
-    gem path gem-path '<1'      # ~/.gem/ruby/2.0.0/gems/gem-path-0.9.9
-    gem path gem-path '~>0.8.2' # ~/.gem/ruby/2.0.0/gems/gem-path-0.8.9
-    gem path gem-path 0.1.0     # ~/.gem/ruby/2.0.0/gems/gem-path-0.1.0
+    gem path rib '<1'      # ~/.gem/ruby/2.0.0/gems/rib-0.9.9
+    gem path rib '~>0.8.2' # ~/.gem/ruby/2.0.0/gems/rib-0.8.9
+    gem path rib 0.1.0     # ~/.gem/ruby/2.0.0/gems/rib-0.1.0
 
 ### Find gem path from a require path
 
-                                # ~/.gem/ruby/2.0.0/gems/gem-path-1.0.0
-    gem path rubygems/commands/path_command
+    gem path rib/config    # ~/.gem/ruby/2.0.0/gems/rib-1.0.0
 
 ### Find file path from a require path
 
-    gem path timeout            # /usr/lib/ruby/2.0.0/timeout.rb
+    gem path timeout       # /usr/lib/ruby/2.0.0/timeout.rb
 
 ## CONTRIBUTORS:
 
