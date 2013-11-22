@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Lin Jen-Shin (godfat)"]
   s.date = "2013-11-22"
-  s.description = "Find the path for a given gem or require path for editing or greping.\n\nFor examples, under [fish](http://fishshell.com/):\n\n    cd (gem path gem-path)\n    vim (gem path gem-path)\n    grep require -R (gem path gem-path)\n\nOr checkout [gem-cd][], [gem-eit][], [gem-grep][].\n\n[gem-cd]: https://github.com/godfat/gem-cd\n[gem-eit]: https://github.com/godfat/gem-eit\n[gem-grep]: https://github.com/godfat/gem-grep"
+  s.description = "Find the path for a given gem or require path for editing or greping.\n\nFor examples, under [fish](http://fishshell.com/):\n\n    cd (gem path gem-path)\n    vim (gem path gem-path)\n    grep require -R (gem path gem-path)\n\nOr checkout [gem-cd][], [gem-eit][], [gem-grep][] for shorthands.\n\n[gem-cd]: https://github.com/godfat/gem-cd\n[gem-eit]: https://github.com/godfat/gem-eit\n[gem-grep]: https://github.com/godfat/gem-grep"
   s.email = ["godfat (XD) godfat.org"]
   s.files = [
   ".gitignore",
