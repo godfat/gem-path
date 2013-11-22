@@ -33,11 +33,15 @@ class Gem::Commands::PathCommand < Gem::Command
 
   private
   def extract! args
-    gem(*args) if args.size > 1 # only gem has versions
+    gem(*args)
     args
   rescue LoadError => e
-    alert_error(e.message)
-    terminate_interaction(1)
+    if args.size > 1 # terminate if we're asking a specific gem version
+      alert_error(e.message)
+      terminate_interaction(1)
+    else
+      args # this could be a require path, go on searching
+    end
   end
 
   def find_path_gem name

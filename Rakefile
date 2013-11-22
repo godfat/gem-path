@@ -8,5 +8,5 @@ end
 
 Gemgem.init(dir) do |s|
   s.name    = 'gem-path'
-  s.version = '0.5.0'
+  s.version = '0.5.1'
 end
