@@ -17,9 +17,8 @@ For examples, under [fish](http://fishshell.com/):
     vim (gem path gem-path)
     grep require -R (gem path gem-path)
 
-Or checkout [gem-cd][], [gem-eit][], [gem-grep][] for shorthands.
+Or checkout [gem-eit][], [gem-grep][] for shorthands.
 
-[gem-cd]: https://github.com/godfat/gem-cd
 [gem-eit]: https://github.com/godfat/gem-eit
 [gem-grep]: https://github.com/godfat/gem-grep
 
