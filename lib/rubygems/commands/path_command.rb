@@ -34,9 +34,9 @@ class Gem::Commands::PathCommand < Gem::Command
   def find_gem_path name
     gem_path = Gem.path.find do |base|
       gem_path = $LOAD_PATH.find do |path|
-                   gem_path = path[%r{#{base}/gems/#{name}\-[^/-]+/}]
-                   break gem_path if gem_path
-                 end
+        gem_path = path[%r{#{base}/(bundler/)?gems/#{name}\-[^/-]+/}]
+        break gem_path if gem_path
+      end
       break gem_path if gem_path
     end
     gem_path[0...-1] if gem_path

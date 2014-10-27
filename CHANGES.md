@@ -1,5 +1,9 @@
 # CHANGES
 
+## gem-path 0.6.1 -- 2014-10-27
+
+* Updated that gem-beit could search against bundler installed gems.
+
 ## gem-path 0.6.0 -- 2014-10-27
 
 * Internal cleanup and make find_gem_path a public method.
