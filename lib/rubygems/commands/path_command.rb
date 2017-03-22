@@ -34,12 +34,20 @@ class Gem::Commands::PathCommand < Gem::Command
   def find_gem_path name
     gem_path = Gem.path.find do |base|
       gem_path = $LOAD_PATH.find do |path|
-        gem_path = path[%r{#{base}/(bundler/)?gems/#{name}\-[^/-]+/}]
+        platforms = Gem.platforms.
+          map(&:to_s).map(&Regexp.method(:escape)).join('|')
+        gem_path = path[
+          %r{\A#{base}/
+             (?:bundler/)?
+             gems/
+             #{name}\-[^/-]+(?:\-(?:#{platforms}))?/
+          }x
+        ]
         break gem_path if gem_path
       end
       break gem_path if gem_path
     end
-    gem_path[0...-1] if gem_path
+    gem_path.chop if gem_path
   end
 
   private
