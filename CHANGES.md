@@ -1,5 +1,9 @@
 # CHANGES
 
+## gem-path 0.6.2 -- 2017-03-23
+
+* Fixed finding gems like google-protobuf which could have platform postfix.
+
 ## gem-path 0.6.1 -- 2014-10-27
 
 * Updated that gem-beit could search against bundler installed gems.
