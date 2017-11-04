@@ -24,7 +24,7 @@ Or checkout [gem-eit][], [gem-grep][] for shorthands.
 
 ## REQUIREMENTS:
 
-* Tested with MRI (official CRuby) 1.9.3, 2.0.0, Rubinius and JRuby.
+* Tested with MRI (official CRuby), Rubinius and JRuby.
 
 ## INSTALLATION:
 
