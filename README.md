@@ -62,7 +62,7 @@ This was extracted from [eit-gem][].
 
 ## LICENSE:
 
-Apache License 2.0 (Apache-2)
+Apache License 2.0 (Apache-2.0)
 
 Copyright (c) 2013-2017, Lin Jen-Shin (godfat)
 
