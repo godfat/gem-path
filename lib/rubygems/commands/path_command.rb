@@ -34,8 +34,12 @@ class Gem::Commands::PathCommand < Gem::Command
   def find_gem_path name
     gem_path = Gem.path.find do |base|
       gem_path = $LOAD_PATH.find do |path|
-        platforms = Gem.platforms.
-          map(&:to_s).map(&Regexp.method(:escape)).join('|')
+        platforms = [
+          'ruby',
+          sitearch,
+          *univeral_darwin
+        ].map(&Regexp.method(:escape)).join('|')
+
         gem_path = path[
           %r{\A#{base}/
              (?:bundler/)?
@@ -60,6 +64,16 @@ class Gem::Commands::PathCommand < Gem::Command
       terminate_interaction(1)
     else
       args # this could be a require path, go on searching
+    end
+  end
+
+  def sitearch
+    @sitearch ||= RbConfig::CONFIG['sitearch']
+  end
+
+  def univeral_darwin
+    if sitearch.include?('darwin')
+      'universal-darwin'
     end
   end
 end
