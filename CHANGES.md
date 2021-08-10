@@ -1,5 +1,10 @@
 # CHANGES
 
+## gem-path 0.7.0 -- 2021-08-11
+
+* Fixed finding gems like google-protobuf again on Mac where it may not be
+  using `x86_64-darwin20` but `universal-darwin`.
+
 ## gem-path 0.6.2 -- 2017-03-23
 
 * Fixed finding gems like google-protobuf which could have platform postfix.
