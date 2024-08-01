@@ -1,5 +1,9 @@
 # CHANGES
 
+## gem-path 1.0.0 -- 2024-08-01
+
+* Fixed looking up local gems specified in bundler.
+
 ## gem-path 0.7.0 -- 2021-08-11
 
 * Fixed finding gems like google-protobuf again on Mac where it may not be
