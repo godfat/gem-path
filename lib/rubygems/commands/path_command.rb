@@ -48,10 +48,15 @@ class Gem::Commands::PathCommand < Gem::Command
           }x
         ]
         break gem_path if gem_path
+
+        if Object.const_defined?(:Bundler)
+          gem_path = bundler_gem_name_to_path[name]
+          break gem_path if gem_path
+        end
       end
       break gem_path if gem_path
     end
-    gem_path.chop if gem_path
+    gem_path.chomp('/') if gem_path
   end
 
   private
@@ -65,6 +70,14 @@ class Gem::Commands::PathCommand < Gem::Command
     else
       args # this could be a require path, go on searching
     end
+  end
+
+  def bundler_gem_name_to_path
+    @bundler_gem_name_to_path ||= Bundler.load.
+      requested_specs.inject({}) do |result, spec|
+        result[spec.name] = spec.full_gem_path
+        result
+      end
   end
 
   def sitearch
